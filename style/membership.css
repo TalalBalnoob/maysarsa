@@ -1319,12 +1319,35 @@ a.contact:hover {
      ≥ 760px — same design, wider layout
      ===================================================================== */
 @media (min-width: 760px) {
+	/* wide screens: show the whole figure (not a face crop). The photo is
+	   centred on a backdrop of the studio's own colour, edges faded into it. */
 	.m-hero {
+		isolation: isolate;
 		height: clamp(560px, 78svh, 820px);
+		background: #a29fa0;
+	}
+	.m-hero::before,
+	.m-hero::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+	}
+	.m-hero::before {
+		inset: 0;
+		background:
+			linear-gradient(rgba(33, 33, 33, 0.4), rgba(33, 33, 33, 0.4)), linear-gradient(#f3eeee, #f6f2f3 70%, #efeaeb);
+	}
+	.m-hero::after {
+		top: 50%;
+		left: 32%;
+		height: 116%;
+		aspect-ratio: 3495 / 5241;
+		transform: translate(-32%, -50%);
 		background:
 			linear-gradient(rgba(33, 33, 33, 0.4), rgba(33, 33, 33, 0.4)),
-			var(--hero-image) 50% 14% / cover no-repeat,
-			#a29fa0;
+			var(--hero-image) center / 100% 100% no-repeat;
+		-webkit-mask-image: linear-gradient(to right, transparent, #000 22%, #000 78%, transparent);
+		mask-image: linear-gradient(to right, transparent, #000 22%, #000 78%, transparent);
 	}
 	.m-hero__in {
 		padding-inline: 40px;
@@ -1426,7 +1449,7 @@ a.contact:hover {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 24px;
 		margin: 40px 0 0;
-		align-items: start;
+		grid-auto-rows: 1fr; /* every card takes the height of the tallest one */
 	}
 	.m-card {
 		padding: 22px 28px 30px;
