@@ -1194,7 +1194,8 @@ a.contact:hover {
 	opacity: 1;
 }
 .f-input[type='tel'] {
-	text-align: right;
+	direction: ltr;
+	text-align: left; /* phone numbers read left-to-right, as in the design */
 }
 .f-input:focus {
 	outline: none;
