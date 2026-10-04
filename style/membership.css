@@ -1131,190 +1131,6 @@ a.contact:hover {
 	margin-top: 2.4em;
 }
 
-/* ---------- Registration form ---------- */
-.m-form {
-	padding: calc(var(--k) * 333.7) 0 calc(var(--k) * 224);
-	background: var(--m-paper);
-}
-.m-form .col {
-	padding: 0 calc(var(--k) * 124) 0 calc(var(--k) * 113);
-}
-.m-form__title {
-	margin-inline-start: calc(var(--k) * 2);
-	color: var(--m-gold-soft);
-	font-size: calc(var(--k) * 102);
-	line-height: 1.2;
-	font-weight: 700;
-}
-.m-form__sub {
-	margin-top: calc(var(--k) * 72.5);
-	margin-inline-start: calc(var(--k) * -1.2);
-	color: var(--dark);
-	font-size: calc(var(--k) * 51);
-	line-height: 1.2;
-	font-weight: 300;
-	text-align: justify;
-}
-.f {
-	--fs: calc(var(--k) * 36);
-	--line: max(1px, calc(var(--k) * 2.4));
-	margin-top: calc(var(--k) * 240.5);
-	color: var(--m-label);
-	font-size: var(--fs);
-	line-height: 1.2;
-	font-weight: 400;
-}
-.f-field + .f-field {
-	margin-top: calc(var(--k) * 69);
-}
-.f-label {
-	display: block;
-	padding: 0;
-	font-weight: 400;
-}
-.f-req {
-	color: var(--gold);
-}
-.f-input {
-	display: block;
-	width: 100%;
-	height: calc(var(--k) * 149);
-	padding: calc(var(--k) * 65) 0 calc(var(--k) * 36);
-	border: 0;
-	border-bottom: var(--line) solid var(--m-field-line);
-	border-radius: 0;
-	background: transparent;
-	color: #222;
-	font: inherit;
-	font-size: calc(var(--k) * 40);
-	line-height: 1.2;
-}
-.f-input::placeholder {
-	color: #757575;
-	opacity: 1;
-}
-.f-input[type='tel'] {
-	text-align: right;
-}
-.f-input:focus {
-	outline: none;
-	border-bottom-color: var(--gold);
-}
-.f-group {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	min-width: 0;
-}
-.f-group legend {
-	padding: 0;
-	float: right;
-	width: 100%;
-}
-.f-group--q {
-	margin-top: calc(var(--k) * 60.2);
-}
-.f-group:not(.f-group--q) {
-	margin-top: calc(var(--k) * 46.5);
-}
-.f-q {
-	color: var(--m-q);
-	font-size: calc(var(--k) * 33);
-}
-.f-opts {
-	clear: both;
-	display: flex;
-	flex-wrap: wrap;
-	gap: calc(var(--k) * 24);
-	padding-top: calc(var(--k) * 52.4);
-}
-.f-group:not(.f-group--q) .f-opts {
-	padding-top: calc(var(--k) * 21.8);
-}
-.f-opt {
-	position: relative;
-	display: grid;
-	place-items: center;
-	height: calc(var(--k) * 107.8);
-	padding-inline: calc(var(--k) * 46);
-	min-width: calc(var(--k) * 171);
-	border: var(--line) solid var(--m-field-line);
-	cursor: pointer;
-	transition:
-		background-color 0.15s,
-		border-color 0.15s,
-		color 0.15s;
-}
-.f-opt--wide {
-	width: calc(var(--k) * 272);
-	height: calc(var(--k) * 107);
-	border-color: var(--m-opt-line);
-	color: var(--m-q);
-	font-size: calc(var(--k) * 33);
-}
-.f-group--q .f-opts {
-	padding-inline-start: calc(var(--k) * 5);
-}
-.f-opt input {
-	position: absolute;
-	opacity: 0;
-	pointer-events: none;
-}
-.f-opt:hover {
-	border-color: var(--gold);
-}
-.f-opt:has(input:checked) {
-	border-color: #000;
-	background: #000;
-	color: var(--white);
-}
-.f-opt:has(input:focus-visible) {
-	outline: 3px solid var(--gold);
-	outline-offset: 3px;
-}
-.f-check {
-	display: flex;
-	align-items: flex-start;
-	gap: calc(var(--k) * 27);
-	margin-top: calc(var(--k) * 67.2);
-	cursor: pointer;
-}
-.f-check input {
-	appearance: none;
-	flex: none;
-	width: calc(var(--k) * 43);
-	height: calc(var(--k) * 43);
-	min-width: 16px;
-	min-height: 16px;
-	margin: calc(var(--k) * 29.5) 0 0;
-	border: var(--line) solid #767676;
-	border-radius: calc(var(--k) * 6);
-	background: var(--white);
-	cursor: pointer;
-}
-.f-check input:checked {
-	border-color: #000;
-	background: #000
-		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='m3.5 8.5 3 3 6-7'/%3E%3C/svg%3E")
-		center / 80% no-repeat;
-}
-.f-submit {
-	display: block;
-	width: calc(100% + var(--k) * 1);
-	height: calc(var(--k) * 148);
-	margin-top: calc(var(--k) * 92);
-	border: 0;
-	border-radius: 0;
-	background: #000;
-	color: var(--white);
-	font-size: calc(var(--k) * 37);
-	font-weight: 700;
-	transition: background-color 0.2s;
-}
-.f-submit:hover {
-	background: #222;
-}
-
 /* =====================================================================
      ≥ 760px — same design, wider layout
      ===================================================================== */
@@ -1373,11 +1189,9 @@ a.contact:hover {
 	.m-badge__sub {
 		margin-top: 4px;
 	}
-
 	.m-wave {
 		--wh: clamp(130px, 17vw, 260px);
 	}
-
 	.m-kaaba {
 		height: clamp(420px, 56vw, 760px);
 		background:
@@ -1392,7 +1206,6 @@ a.contact:hover {
 		width: clamp(180px, 20vw, 260px);
 		transform: translateX(-39.9%);
 	}
-
 	.m-story {
 		font-size: 20px;
 		line-height: 1.6;
@@ -1436,7 +1249,6 @@ a.contact:hover {
 			rgba(252, 246, 236, 0.97) 100%
 		);
 	}
-
 	.m-perks {
 		padding: 140px 0 96px;
 		background: linear-gradient(var(--m-cream) 60px, var(--white) 140px);
@@ -1501,7 +1313,6 @@ a.contact:hover {
 		font-size: 22px;
 		line-height: 30px;
 	}
-
 	.m-gift {
 		padding: 96px 0 120px;
 		font-size: 20px;
@@ -1536,7 +1347,6 @@ a.contact:hover {
 	.m-gift__box {
 		width: clamp(260px, 34vw, 480px);
 	}
-
 	.m-promise {
 		padding: 96px 0;
 		background-position: -158.684px 21.02px;
@@ -1553,80 +1363,10 @@ a.contact:hover {
 	.m-promise p + p {
 		margin-top: 1.6em;
 	}
-
-	.m-form {
-		padding: 110px 0 120px;
-	}
-	.m-form .col {
-		max-width: 800px;
-		padding-inline: 40px;
-	}
-	.m-form__title {
-		margin: 0;
-		font-size: 48px;
-	}
-	.m-form__sub {
-		margin: 24px 0 0;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.f {
 		--fs: 17px;
 		--line: 1.5px;
 		margin-top: 56px;
-	}
-	.f-field + .f-field {
-		margin-top: 32px;
-	}
-	.f-input {
-		height: 64px;
-		padding: 24px 0 12px;
-		font-size: 18px;
-	}
-	.f-group--q {
-		margin-top: 32px;
-	}
-	.f-group:not(.f-group--q) {
-		margin-top: 28px;
-	}
-	.f-q,
-	.f-opt--wide {
-		font-size: 16px;
-	}
-	.f-opts {
-		gap: 12px;
-		padding-top: 16px;
-	}
-	.f-group:not(.f-group--q) .f-opts {
-		padding-top: 12px;
-	}
-	.f-opt {
-		height: 52px;
-		padding-inline: 24px;
-		min-width: 110px;
-	}
-	.f-opt--wide {
-		width: 150px;
-		height: 52px;
-	}
-	.f-group--q .f-opts {
-		padding-inline-start: 0;
-	}
-	.f-check {
-		gap: 12px;
-		margin-top: 32px;
-	}
-	.f-check input {
-		width: 20px;
-		height: 20px;
-		margin-top: 3px;
-		border-radius: 4px;
-	}
-	.f-submit {
-		width: 100%;
-		height: 64px;
-		margin-top: 40px;
-		font-size: 18px;
 	}
 }
 
