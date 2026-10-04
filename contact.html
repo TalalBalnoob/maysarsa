@@ -13,6 +13,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./style/contact.css" />
+		<link rel="stylesheet" href="./style/form.css" />
 	</head>
 	<body>
 		<svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
@@ -196,6 +197,65 @@
 					</div>
 					<h2 class="c-label cb13">الموقع الإلكتروني الرسمي:</h2>
 					<p class="c-value cb14"><a href="https://www.maysarsa.com" rel="noopener" dir="ltr">www.maysarsa.com</a></p>
+				</div>
+			</section>
+			<section class="m-form" id="register" aria-labelledby="m-form-title">
+				<div class="col">
+					<h2 class="m-form__title" id="m-form-title">سجل عضويتك</h2>
+					<p class="m-form__sub">ميسار الأوائل، سجل بياناتك الآن لتأكيد واستفادة من مزايا العضوية الحصرية</p>
+
+					<form class="f" action="#" onsubmit="return false">
+						<div class="f-field">
+							<label class="f-label" for="f-name">الاسم الكامل <span class="f-req">*</span></label>
+							<input class="f-input" id="f-name" name="name" type="text" autocomplete="name" required />
+						</div>
+						<div class="f-field">
+							<label class="f-label" for="f-phone">رقم الجوال <span class="f-req">*</span></label>
+							<input
+								class="f-input"
+								id="f-phone"
+								name="phone"
+								type="tel"
+								inputmode="tel"
+								autocomplete="tel"
+								placeholder="05xxxxxxxx"
+								required
+							/>
+						</div>
+						<div class="f-field">
+							<label class="f-label" for="f-email">البريد الإلكتروني</label>
+							<input class="f-input" id="f-email" name="email" type="email" autocomplete="email" />
+						</div>
+
+						<fieldset class="f-group f-group--q">
+							<legend class="f-q">هل تود ان تكون أول من يحصل على منتجاتنا الجديدة؟</legend>
+							<div class="f-opts">
+								<label class="f-opt f-opt--wide"><input type="radio" name="early" value="yes" /><span>نعم</span></label>
+								<label class="f-opt f-opt--wide"><input type="radio" name="early" value="no" /><span>لا</span></label>
+							</div>
+						</fieldset>
+
+						<fieldset class="f-group">
+							<legend class="f-label">طريقة التواصل المفضلة <span class="f-req">*</span></legend>
+							<div class="f-opts">
+								<label class="f-opt"
+									><input type="radio" name="contact" value="whatsapp" required /><span>واتساب</span></label
+								>
+								<label class="f-opt"><input type="radio" name="contact" value="call" /><span>اتصال</span></label>
+								<label class="f-opt"
+									><input type="radio" name="contact" value="email" /><span>بريد إلكتروني</span></label
+								>
+							</div>
+						</fieldset>
+
+						<label class="f-check"
+							><input type="checkbox" name="privacy" required /><span
+								>أوافق على سياسة الخصوصية <span class="f-req">*</span></span
+							></label
+						>
+
+						<button class="f-submit" type="submit">سجل عضويتك</button>
+					</form>
 				</div>
 			</section>
 		</main>
