@@ -24,7 +24,7 @@
 	--hdr-line: #757071;
 	--white: #ffffff;
 
-	--font: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
+	--font: 'Almarai', 'Segoe UI', Tahoma, Arial, sans-serif;
 
 	/* 1 design unit = 1/1080 of the mobile artboard. Everything on mobile is
        expressed in these units, so the page matches the PDF at any phone width. */
@@ -940,18 +940,18 @@ a.contact:hover {
 .p-layer__name,
 .p-layer__text {
 	margin-inline-start: calc(var(--k) * var(--rt));
-	margin-inline-end: calc(var(--k) * -20);
+	margin-inline-end: calc(var(--k) * -30);
 }
 .p-layer__name {
 	margin-top: calc(var(--k) * var(--gap));
-	font-size: calc(var(--k) * 46);
+	font-size: calc(var(--k) * 44);
 	line-height: 1.2;
 	font-weight: 700;
 }
 .p-layer__text {
 	white-space: nowrap; /* line breaks follow the design (see .p-br) */
 	margin-top: calc(var(--k) * 3.8);
-	font-size: calc(var(--k) * 51);
+	font-size: calc(var(--k) * 45.6);
 	line-height: calc(var(--k) * 54);
 	font-weight: 300;
 }

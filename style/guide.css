@@ -17,7 +17,7 @@
 	--hdr-line: #757071;
 	--white: #ffffff;
 
-	--font: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
+	--font: 'Almarai', 'Segoe UI', Tahoma, Arial, sans-serif;
 
 	/* 1 design unit = 1/1080 of the mobile artboard. Everything on mobile is
        expressed in these units, so the page matches the PDF at any phone width. */
@@ -798,6 +798,7 @@ a.contact:hover {
 .ln {
 	display: block;
 	white-space: nowrap;
+	word-spacing: -0.08em; /* headroom so every design line fits; justify re-fills it */
 	text-align: justify;
 	text-align-last: justify;
 }
@@ -1135,6 +1136,7 @@ a.contact:hover {
 	.ln {
 		display: inline;
 		white-space: normal;
+		word-spacing: normal;
 	}
 	.col.g-text {
 		width: min(100%, 860px);
