@@ -212,6 +212,13 @@ svg {
 		var(--hero-image) 65.78% 5.84% / 166.05% auto no-repeat,
 		var(--dark);
 }
+
+.bg_faded_image {
+	background-image: url('../images/product_bg_faded.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 .hero__content {
 	display: grid;
 	justify-items: center;
