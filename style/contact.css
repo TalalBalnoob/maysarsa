@@ -865,16 +865,30 @@ a.contact:hover {
      ≥ 760px — same design, wider layout
      ===================================================================== */
 @media (min-width: 760px) {
+	/* desktop: photo fills the left half, contact details sit beside it */
 	.c-hero {
-		padding: clamp(520px, 62vw, 900px) 0 120px;
-		background:
-			linear-gradient(rgba(51, 51, 51, 0.05), rgba(51, 51, 51, 0.15) 30%, rgba(51, 51, 51, 0.85) 55%, var(--dark) 68%) 0
-				0 / 100% 100% no-repeat,
-			url('../images/contact/hero.jpg') 50% 12% / 100% auto no-repeat,
-			var(--dark);
+		position: relative;
+		padding: 72px 0 88px;
+		background: var(--dark);
+	}
+	.c-hero::before {
+		content: '';
+		position: absolute;
+		inset: 0 auto 0 0;
+		width: 50%;
+		background: url('../images/contact/hero.jpg') 50% 22% / cover no-repeat;
+		-webkit-mask-image: linear-gradient(to left, transparent, #000 35%);
+		mask-image: linear-gradient(to left, transparent, #000 35%);
+	}
+	.c-hero .col {
+		position: relative;
+		width: min(100%, 1120px);
+	}
+	.c-hero .col > * {
+		max-width: 50%;
 	}
 	.col.c-col {
-		width: min(100%, 860px);
+		width: min(100%, 1120px);
 		padding-inline: 40px;
 	}
 	.ln {
@@ -899,11 +913,11 @@ a.contact:hover {
 		line-height: 1.6;
 	}
 	.c-icon {
-		margin-top: 44px;
-		height: 34px !important;
+		margin-top: 28px;
+		height: 30px !important;
 	}
 	.c-icon--mail {
-		margin-top: 72px;
+		margin-top: 44px;
 	}
 	.c-label,
 	.c-value {
@@ -911,7 +925,7 @@ a.contact:hover {
 		line-height: 1.6;
 	}
 	.c-label {
-		margin-top: 10px;
+		margin-top: 8px;
 	}
 }
 
