@@ -785,7 +785,7 @@ a.contact:hover {
 				var(--dark) calc(var(--k) * 1813)
 			)
 			0 0 / 100% 100% no-repeat,
-		url('../images/contact/hero.jpg') calc(var(--k) * -123.98) calc(var(--k) * -180.71) / calc(var(--k) * 1296.1)
+		url('../images/contact-hero.jpg') calc(var(--k) * -123.98) calc(var(--k) * -180.71) / calc(var(--k) * 1296.1)
 			calc(var(--k) * 2322.3) no-repeat,
 		var(--dark);
 }
@@ -876,7 +876,7 @@ a.contact:hover {
 		position: absolute;
 		inset: 0 auto 0 0;
 		width: 50%;
-		background: url('../images/contact/hero.jpg') 50% 22% / cover no-repeat;
+		background: url('../images/contact-hero.jpg') 50% 22% / cover no-repeat;
 		-webkit-mask-image: linear-gradient(to left, transparent, #000 35%);
 		mask-image: linear-gradient(to left, transparent, #000 35%);
 	}
