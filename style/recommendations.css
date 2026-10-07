@@ -962,6 +962,32 @@ main > section {
 .r-nusuk {
 	padding-inline-start: calc(var(--k) * 159.2);
 }
+/* the store badges inside the Nusuk image are links (positions measured on the 2200x862 image) */
+.r-nusuk__box {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+.r-nusuk__store {
+	position: absolute;
+	border-radius: 6%;
+}
+.r-nusuk__store:focus-visible {
+	outline: 2px solid var(--gold);
+	outline-offset: 2px;
+}
+.r-nusuk__store--gp {
+	left: 16.5%;
+	top: 61.8%;
+	width: 19.2%;
+	height: 14.8%;
+}
+.r-nusuk__store--as {
+	left: 36.9%;
+	top: 60.8%;
+	width: 19.4%;
+	height: 16.8%;
+}
 .r-nusuk img {
 	display: block;
 	width: calc(var(--k) * 733.4);
@@ -1540,8 +1566,11 @@ main > section {
 	.r-docs {
 		margin-top: 28px;
 	}
-	.r-nusuk img {
+	.r-nusuk__box {
 		width: min(100%, 520px);
+	}
+	.r-nusuk img {
+		width: 100%;
 		border-radius: 18px;
 	}
 	.r-docs {
