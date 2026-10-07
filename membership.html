@@ -12,6 +12,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
 		<link rel="stylesheet" href="./style/membership.css" />
 		<link rel="stylesheet" href="./style/form.css" />
 	</head>
@@ -437,7 +438,11 @@
 					<h2 class="m-form__title" id="m-form-title">سجل عضويتك</h2>
 					<p class="m-form__sub">ميسار الأوائل، سجل بياناتك الآن لتأكيد واستفادة من مزايا العضوية الحصرية</p>
 
-					<form class="f" action="#" onsubmit="return false">
+					<form class="f" name="membership" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+						<input type="hidden" name="form-name" value="membership" />
+						<p class="f-hp" aria-hidden="true">
+							<label>لا تملأ هذا الحقل: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+						</p>
 						<div class="f-field">
 							<label class="f-label" for="f-name">الاسم الكامل <span class="f-req">*</span></label>
 							<input class="f-input" id="f-name" name="name" type="text" autocomplete="name" required />
@@ -488,6 +493,7 @@
 						>
 
 						<button class="f-submit" type="submit">سجل عضويتك</button>
+						<p class="f-status" role="status" aria-live="polite"></p>
 					</form>
 				</div>
 			</section>
@@ -578,6 +584,39 @@
 				})
 				window.matchMedia('(min-width: 900px)').addEventListener('change', function (e) {
 					if (e.matches) setOpen(false)
+				})
+			})()
+		</script>
+		<script>
+			// registration form: sent to Netlify Forms, answered in place
+			;(function () {
+				var form = document.querySelector('form[name="membership"]')
+				if (!form || !window.fetch) return
+				var status = form.querySelector('.f-status'),
+					btn = form.querySelector('.f-submit')
+				form.addEventListener('submit', function (e) {
+					e.preventDefault()
+					btn.disabled = true
+					status.className = 'f-status'
+					status.textContent = 'جارٍ الإرسال…'
+					fetch('/', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: new URLSearchParams(new FormData(form)).toString()
+					})
+						.then(function (r) {
+							if (!r.ok) throw new Error(r.status)
+							form.reset()
+							status.className = 'f-status is-ok'
+							status.textContent = 'شكرًا لك! تم استلام طلب عضويتك وسنتواصل معك قريبًا.'
+						})
+						.catch(function () {
+							status.className = 'f-status is-err'
+							status.textContent = 'تعذّر الإرسال، يرجى المحاولة مرة أخرى أو التواصل معنا عبر الواتساب.'
+						})
+						.then(function () {
+							btn.disabled = false
+						})
 				})
 			})()
 		</script>

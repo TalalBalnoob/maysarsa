@@ -190,6 +190,33 @@
 .f-submit:hover {
 	background: #222;
 }
+.f-submit:disabled {
+	opacity: 0.6;
+	cursor: progress;
+}
+.f-hp {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+.f-status {
+	margin-top: calc(var(--k) * 40);
+	font-size: max(14px, calc(var(--k) * 37));
+	line-height: 1.5;
+	text-align: center;
+}
+.f-status:empty {
+	display: none;
+}
+.f-status.is-ok {
+	color: #2e7d32;
+}
+.f-status.is-err {
+	color: #b3261e;
+}
 
 @media (min-width: 760px) {
 	.m-form {
