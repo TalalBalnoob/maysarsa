@@ -1381,3 +1381,39 @@ a.contact:hover {
 		padding-bottom: calc(clamp(260px, 34vw, 480px) + 24px);
 	}
 }
+
+/* mobile footer: measured from the home-page PDF */
+@media (max-width: 759px) {
+	.site-footer {
+		padding-bottom: calc(var(--k) * 153.6);
+	}
+	.foot__brand .tagline {
+		margin-top: calc(var(--k) * 74.8);
+	}
+	.foot__brand .tag-ar,
+	.foot__brand .tag-en {
+		line-height: 1.2;
+	}
+	.foot__brand .tag-ar {
+		font-weight: 400;
+		font-size: calc(var(--k) * 38.6);
+	}
+	.foot__brand .tag-en {
+		margin-top: calc(var(--k) * 9.7);
+		font-size: calc(var(--k) * 32.3);
+	}
+	.contacts {
+		gap: calc(var(--k) * 19);
+		margin-top: calc(var(--k) * 83.8);
+	}
+	.contact {
+		gap: calc(var(--k) * 12.2);
+		min-height: calc(var(--k) * 153);
+		padding: calc(var(--k) * 11) 10px 0;
+		font-size: calc(var(--k) * 38.6);
+		line-height: 1.2;
+	}
+	.contact:last-child {
+		margin-top: calc(var(--k) * 6);
+	}
+}
