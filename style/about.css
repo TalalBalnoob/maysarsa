@@ -970,8 +970,8 @@ a.contact:hover {
 				rgba(0, 0, 0, 0.885) 89%,
 				rgba(0, 0, 0, 0.911) 100%
 			)
-			0 calc(var(--k) * 20) / 100% calc(var(--k) * 1032) no-repeat,
-		var(--kaaba-image) 50% calc(var(--k) * 20) / calc(var(--k) * 1795) calc(var(--k) * 1010) no-repeat,
+			0 calc(var(--k) * 20) / 100% calc(var(--k) * 1077) no-repeat,
+		var(--kaaba-image) 50% calc(var(--k) * 20) / calc(var(--k) * 1914) calc(var(--k) * 1077) no-repeat,
 		#000;
 }
 .kaaba-sec__quote {
@@ -1046,7 +1046,7 @@ a.contact:hover {
 	}
 	.kaaba-sec {
 		margin-top: calc(var(--k) * 261.7);
-		padding: calc(var(--k) * 785) 0 calc(var(--k) * 256);
+		padding: calc(var(--k) * 785) 0 calc(var(--k) * 80);
 	}
 	.kaaba-sec__quote {
 		padding-inline: calc(var(--k) * 144.7) calc(var(--k) * 159.2);
@@ -1115,10 +1115,10 @@ a.contact:hover {
 	}
 	.kaaba-sec {
 		margin-top: 112px;
-		padding: clamp(340px, 34vw, 480px) 0 120px;
+		padding: clamp(340px, 34vw, 480px) 0 72px;
 		background:
 			linear-gradient(var(--gold-2), var(--gold-2)) 0 0 / 100% 12px no-repeat,
-			linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0.92) 70%, #000 88%)
+			linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.88))
 				0 0 / 100% 100% no-repeat,
 			var(--kaaba-image) 50% 30% / cover no-repeat,
 			#000;
